@@ -18,8 +18,9 @@ describe('Game', () => {
    })
 
   it('should create a deck of cards', () => {
+     game.createCards();
      game.createDeck();
-     expect(game.cards.length).to.equal(30);
+     expect(game.deck.cards.length).to.equal(30);
   })
 
   it('should keep track of the current Round', () => {

@@ -37,33 +37,35 @@ describe('Round', function() {
   })
 
   it('should move second card in deck to current card', ()=> {
-    round.takeTurn('No idea');
-    expect(round.returnCurrentCard()).to.equal(cardTwo)
+    round.takeTurn('object');
+    round.takeTurn('no idea')
+    round.returnCurrentCard();
+    expect(round.returnCurrentCard()).to.equal(cardThree)
   })
 
   it('should store the ids of incorrect guesses', () => {
-    round.takeTurn('No idea');
-    expect(round.incorrectGuesses).to.deep.equal([ 2 ]);
+    round.takeTurn('object');
+    round.takeTurn('no idea');
+    expect(round.incorrectGuesses).to.deep.equal([2]);
   })
 
   it('should give feedback with takeTurn method', () => {
-    let takeTurn = round.takeTurn('array');
-    expect(takeTurn).to.equal('correct!')
     takeTurn = round.takeTurn('iteration method')
     expect(takeTurn).to.equal('incorrect!')
   })
 
   it('should calculate percentage of correctly answered questions', () => {
     round.takeTurn('who knows')
-    round.takeTurn('mutator method')
+    round.takeTurn('array')
     let correctPercent = round.calculatePercentCorrect()
     expect(correctPercent).to.equal(50)
   })
 
   it('should print round over message with correct answer percentage', () => {
     expect(round.endRound()).to.equal(`** Round over! ** You answered 0% of the questions correctly!`);
-    round.takeTurn('array');
-    expect(round.endRound()).to.equal(`** Round over! ** You answered 100% of the questions correctly!`);
+    const newTurn = round.takeTurn()
+    round.takeTurn('array')
+    expect(round.endRound()).to.equal(`** Round over! ** You answered 50% of the questions correctly!`);
   })
 
 });
