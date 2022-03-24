@@ -8,11 +8,12 @@ const Card = require('../src/Card');
 
 class Game {
   constructor() {
-    this.currentRound = null;
+    this.currentRound = undefined;
   }
   start(){
-    const deck = new Deck(prototypeQuestions)
-    this.currentRound = new Round(deck)
+    let deck = new Deck(prototypeQuestions);
+    let round = new Round(deck);
+    this.currentRound = round;
 
     this.printMessage(deck);
     this.printQuestion(this.currentRound);
