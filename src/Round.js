@@ -14,8 +14,8 @@ class Round{
   }
 
   takeTurn(guess){
-    this.turnCount++;
     let currentTurn = new Turn(guess, this.returnCurrentCard())
+    this.turnCount++;
     if(!currentTurn.evaluateGuess()){
       this.incorrectGuesses.push(currentTurn.card.id)
     }
@@ -29,7 +29,7 @@ class Round{
   }
 
   endRound(){
-    // console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
   }
 }

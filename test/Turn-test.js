@@ -34,10 +34,14 @@ describe('Turn', () => {
   it('should have method evaluateGuess that can check if guess matches answer', () => {
     let evaluateGuess = turn.evaluateGuess();
     expect(evaluateGuess).to.equal(true);
+    // const turnTwo = new Turn('oops', cardOne)
+    // expect(evaluateGuess).to.equal(false);
   });
 
   it('should have method giveFeedback that returns incorrect or correct', () => {
     let giveFeedback = turn.giveFeedback();
     expect(giveFeedback).to.equal("correct!")
+    let turnTwo = new Turn('oops', cardOne)
+    expect(giveFeedback).to.equal("incorrect!")
   });
 })
