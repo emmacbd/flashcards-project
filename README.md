@@ -8,13 +8,14 @@ With this game you can answer a series of code-related questions through the ter
 The basic flow of this game is:
 - The user is prompted with a question and a series of possible answers.
 - The user then selects the answer they believe is correct.
-- The game will inform the user if the answer was correct of not.
+- The game will inform the user if the answer was correct or not.
 - The game will prompt a user with another question until the user has answered every question in the deck.
 - When the game is over, the user will see a message providing the percentage of questions they answered correctly.
 
-### A GIF of the working application
+### Functionality
+![Screen Recording 2022-03-24 at 5 45 39 PM](https://user-images.githubusercontent.com/93603551/160022867-02ba379c-515c-436a-a0f8-9eeea9ff4d66.gif)
 
-### Technologies used
+### Technologies Used
 - JavaScript
 - TDD
 
