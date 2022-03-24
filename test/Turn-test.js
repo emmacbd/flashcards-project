@@ -9,7 +9,7 @@ describe('Turn', () => {
 
   beforeEach('Set up turn', () => {
     cardOne = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
-    turn = new Turn("object", cardOne);;
+    turn = new Turn('object', cardOne);;
   })
 
   it('should be an instance of Turn', () => {
@@ -17,7 +17,7 @@ describe('Turn', () => {
   });
 
   it('should be instantiated with a guess and a card', () => {
-    expect(turn.guess).to.equal("object");
+    expect(turn.guess).to.equal('object');
     expect(turn.card).to.equal(cardOne);
   });
 

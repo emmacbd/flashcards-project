@@ -67,6 +67,3 @@ describe('Round', function() {
   })
 
 });
-
-
-// endRound: method that prints the following to the console: ‘** Round over! ** You answered <>% of the questions correctly!'
